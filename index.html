@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Product + Nested Checkbox Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">MyProduct</div>
+      <nav class="nav-desktop">
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#checkbox">Checkbox Demo</a>
+      </nav>
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-expanded="false">Menu</button>
+    </div>
+    <div id="mobileNav" class="mobile-nav" hidden>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#checkbox">Checkbox Demo</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="title">Manuka Honey — Premium</h1>
+        <p class="subtitle">Raw, locally-sourced honey with natural goodness.</p>
+        <div class="price-row">
+          <div class="price">₹1,199</div>
+          <div class="actions">
+            <button class="btn primary">Buy Now</button>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+        <ul class="features" id="features">
+          <li>100% natural</li>
+          <li>Lab tested</li>
+          <li>30-day return</li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <div class="product-image placeholder">Product Image</div>
+        <div class="thumbs">
+          <div class="thumb placeholder">Img 1</div>
+          <div class="thumb placeholder">Img 2</div>
+          <div class="thumb placeholder">Img 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Related Products</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-image placeholder">Item</div>
+          <h3>Product A</h3>
+          <p>Short description.</p>
+        </article>
+        <article class="card">
+          <div class="card-image placeholder">Item</div>
+          <h3>Product B</h3>
+          <p>Short description.</p>
+        </article>
+        <article class="card">
+          <div class="card-image placeholder">Item</div>
+          <h3>Product C</h3>
+          <p>Short description.</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="sidebar demo-panel">
+      <h2>Task 2: Nested Checkbox</h2>
+      <div id="checkbox">
+        <label class="row"><input type="checkbox" id="selectAll"> Select All</label>
+
+        <div class="category">
+          <label class="row"><input type="checkbox" class="category-checkbox" data-category="fruits"> Fruits</label>
+          <div class="items">
+            <label class="row"><input type="checkbox" class="fruit" value="apple"> Apple</label>
+            <label class="row"><input type="checkbox" class="fruit" value="banana"> Banana</label>
+            <label class="row"><input type="checkbox" class="fruit" value="orange"> Orange</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <label class="row"><input type="checkbox" class="category-checkbox" data-category="vegetables"> Vegetables</label>
+          <div class="items">
+            <label class="row"><input type="checkbox" class="vegetable" value="carrot"> Carrot</label>
+            <label class="row"><input type="checkbox" class="vegetable" value="broccoli"> Broccoli</label>
+            <label class="row"><input type="checkbox" class="vegetable" value="potato"> Potato</label>
+          </div>
+        </div>
+
+        <div class="selection-preview">
+          <h4>Selected items</h4>
+          <pre id="selectedOut">[]</pre>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Demo project — Responsive layout + Nested checkboxes</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
